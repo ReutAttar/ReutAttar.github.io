@@ -37,7 +37,10 @@ input {
   text-align: center;
   padding: 5px 0;
 }
-
+input:disabled {
+  /* background: #dceeec; */
+  background-color: #ffffff9c;
+}
 h3 {
   font-weight: 100;
   font-size: 13px;
