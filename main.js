@@ -5,6 +5,7 @@ var spanSeconds = document.querySelector("#seconds");
 var btnStart = document.querySelector("#btnStart");
 var btnStop = document.querySelector("#btnStop");
 var btnPause = document.querySelector("#btnPause");
+var btnReset = document.querySelector("#btnReset");
 var intervalID;
 var timeOutImg = document.querySelector("#timeOutImg");
 var countdownContainer = document.querySelector("#countdown-container");
@@ -14,7 +15,7 @@ var loader = document.querySelector(".loader");
 secondsInput.oninput = validTime;
 minutesInput.oninput = validTime;
 
-//validation function for input fields
+//validation fanction for input fields
 function validTime() {
   if (minutesInput.value > 59 || minutesInput.value < 0 || secondsInput.value > 59 || secondsInput.value < 0) {
     if (minutesInput.value > 59 || minutesInput.value < 0)
@@ -41,6 +42,7 @@ async function fetchRandomImg() {
   timeOutImg.src = url;
   timeOutImg.onload = function () {
     timeOutImg.style.display = "block";
+    btnReset.style.display = "block";
     loader.style.display = "none";
   };
 }
@@ -100,7 +102,8 @@ btnStart.onclick = function () {
       } else {
         spanMinutes.innerText = minutesValue < 10 ? "0" + minutesValue : minutesValue;
         spanSeconds.innerText = secondsValue <= 10 ? "0" + --secondsValue : --secondsValue;
-
+        console.log(time);
+        console.log(i);
         if (secondsValue !== 0 || minutesValue !== 0) {
           //when seconds=0 and minutes=0 if=false, Because we do not want to promote "i", because we have reached a point where the circumference of the circle is over and "i" can affect it
           circle.style.strokeDashoffset = init - (i + 1) * (initialOffset / time); //sets the circumference of the circle
@@ -124,4 +127,10 @@ btnStop.onclick = function () {
 btnPause.onclick = function () {
   clearInterval(intervalID);
   isPause = true;
+};
+
+btnReset.onclick = function () {
+  timeOutImg.style.display = "none";
+  btnReset.style.display = "none";
+  countdownContainer.style.display = "grid";
 };
