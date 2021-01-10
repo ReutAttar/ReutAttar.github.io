@@ -14,7 +14,7 @@ var loader = document.querySelector(".loader");
 secondsInput.oninput = validTime;
 minutesInput.oninput = validTime;
 
-//validation fanction for input fields
+//validation function for input fields
 function validTime() {
   if (minutesInput.value > 59 || minutesInput.value < 0 || secondsInput.value > 59 || secondsInput.value < 0) {
     if (minutesInput.value > 59 || minutesInput.value < 0)
@@ -100,8 +100,7 @@ btnStart.onclick = function () {
       } else {
         spanMinutes.innerText = minutesValue < 10 ? "0" + minutesValue : minutesValue;
         spanSeconds.innerText = secondsValue <= 10 ? "0" + --secondsValue : --secondsValue;
-        console.log(time);
-        console.log(i);
+
         if (secondsValue !== 0 || minutesValue !== 0) {
           //when seconds=0 and minutes=0 if=false, Because we do not want to promote "i", because we have reached a point where the circumference of the circle is over and "i" can affect it
           circle.style.strokeDashoffset = init - (i + 1) * (initialOffset / time); //sets the circumference of the circle
