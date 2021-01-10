@@ -11,6 +11,7 @@ var countdownContainer = document.querySelector("#countdown-container");
 var circle = document.querySelector("circle");
 var loader = document.querySelector(".loader");
 var showCountdown = document.querySelector("#showCountdown");
+var countdown = document.querySelector("#countdown");
 
 secondsInput.oninput = validTime;
 minutesInput.oninput = validTime;
@@ -48,6 +49,7 @@ async function fetchRandomImg() {
   timeOutImg.onload = function () {
     timeOutImg.style.display = "block";
     loader.style.display = "none";
+    countdown.style.display = "none";
   };
 }
 var isPause = false;
@@ -102,8 +104,6 @@ btnStart.onclick = function () {
       if (secondsValue === 0 && minutesValue === 0) {
         //if the timer ends
         clearInterval(intervalID);
-        /*countdownContainer.style.display = "none";
-        loader.style.display = "block";*/
         showCountdown.style.display = "none";
         loader.style.display = "flex";
         fetchRandomImg();

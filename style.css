@@ -11,6 +11,7 @@ body {
   grid-row-gap: 70px;
   grid-column-gap: 20px;
   width: 600px;
+  height: 400px;
   margin: 40px auto;
   padding: 15px;
   border-radius: 5px;
@@ -49,7 +50,8 @@ h3 {
 }
 
 #timeOutImg {
-  margin: 40px auto;
+  max-width: 200px;
+  /*margin: 40px auto;*/
 }
 
 svg {
@@ -77,8 +79,9 @@ svg circle {
   border-bottom: 16px solid #33e32a;
   width: 120px;
   height: 120px;
-  margin: 40px auto;
+  margin: 0px; /*else if 40px the timer suddenly expands to show the loader*/
   animation: spin 2s linear infinite;
+  z-index: 1;
 }
 
 @keyframes spin {
