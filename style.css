@@ -73,8 +73,8 @@ svg circle {
   display: none;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid blue;
-  border-bottom: 16px solid blue;
+  border-top: 16px solid #33e32a;
+  border-bottom: 16px solid #33e32a;
   width: 120px;
   height: 120px;
   margin: 40px auto;
