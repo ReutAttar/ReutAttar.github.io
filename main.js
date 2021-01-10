@@ -133,4 +133,7 @@ btnReset.onclick = function () {
   timeOutImg.style.display = "none";
   btnReset.style.display = "none";
   countdownContainer.style.display = "grid";
+  btnStop.onclick();
+  minutesInput.value = "";
+  secondsInput.value = "";
 };

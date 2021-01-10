@@ -11,26 +11,20 @@
       <div>
         <label>Minutes</label>
         <input type="number" id="inputMinutes" min="0" max="59" />
-        <h3 id="invalidMinutes" style="display: none">
-          minutes must be between 0-59
-        </h3>
+        <h3 id="invalidMinutes" style="display: none">minutes must be between 0-59</h3>
       </div>
       <div></div>
       <div>
         <label>Seconds</label>
         <input type="number" id="inputSeconds" min="0" max="59" />
-        <h3 id="invalidSeconds" style="display: none">
-          seconds must be between 0-59
-        </h3>
+        <h3 id="invalidSeconds" style="display: none">seconds must be between 0-59</h3>
       </div>
       <div></div>
       <div id="countdown">
         <svg>
           <circle r="80" cx="100" cy="100"></circle>
         </svg>
-        <div id="showCountdown">
-          <span id="minutes">00</span> : <span id="seconds">00</span>
-        </div>
+        <div id="showCountdown"><span id="minutes">00</span> : <span id="seconds">00</span></div>
       </div>
       <div></div>
       <div>
@@ -45,7 +39,7 @@
     </div>
     <div class="loader"></div>
     <img id="timeOutImg" style="display: none" />
-    <button id="btnReset" class="myButton" style="display: none">Reset</button>
+    <button id="btnReset" class="myButton" style="display: none">Restart</button>
     <script src="main.js"></script>
   </body>
 </html>
