@@ -120,3 +120,6 @@ svg circle {
   background: darkgrey;
   color: #377686;
 }
+#btnReset {
+  margin: auto;
+}
