@@ -1,8 +1,10 @@
 var slider = tns({
   container: ".my-slider",
-  items: 1,
-  autoplay: true,
+  items: 4,
   speed: 10000,
+  autoplay: true,
+  autoplayTimeout: 100,
+  swipeAngle: false,
   responsive: {
     640: {
       edgePadding: 20,
