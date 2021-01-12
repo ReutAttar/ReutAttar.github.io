@@ -3,33 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="my-slider">
-      <div>
-        <img
-          src="https://img.freepik.com/free-photo/autumn-forest_1182-869.jpg?size=626&ext=jpg&ga=GA1.2.192830739.1606753746"
-        />
-      </div>
-      <div>
-        <img
-          src="https://img.freepik.com/free-photo/beautiful-park_1127-2854.jpg?size=626&ext=jpg&ga=GA1.2.192830739.1606753746"
-        />
-      </div>
-      <div>
-        <img
-          src="https://img.freepik.com/free-photo/beautiful-sunset-mountain-around-beach-sea-ocean-rock_74190-13290.jpg?size=626&ext=jpg&ga=GA1.2.192830739.1606753746"
-        />
-      </div>
-      <div>
-        <img
-          src="https://img.freepik.com/free-photo/beautiful-scenery-green-valley-near-alp-mountains-austria-cloudy-sky_181624-6979.jpg?size=626&ext=jpg&ga=GA1.2.192830739.1606753746"
-        />
+    <div class="demo-container">
+      <h1>credit card form</h1>
+      <div class="card-wrapper"></div>
+
+      <div class="form-container">
+        <form action="">
+          <p class="small">Start typing in here to take over and try it out</p>
+          <div class="row">
+            <input placeholder="Card number" type="tel" name="number" style="width: 50%" />
+            <input placeholder="Full name" type="text" name="name" style="width: 50%" />
+          </div>
+          <div class="row">
+            <input placeholder="MM/YY" type="tel" name="expiry" style="width: 48%" />
+            <input placeholder="CVC" type="number" name="cvc" style="width: 48%" />
+            <input type="submit" value="Submit" class="button" style="width: 100%" />
+          </div>
+        </form>
       </div>
     </div>
-    <script src="main.js"></script>
+    <script src="/card.js"></script>
+    <script>
+      var card = new Card({
+        form: "form",
+        container: ".card-wrapper",
+
+        // formSelectors: {
+        //   nameInput: 'input[name="first-name"], input[name="last-name"]',
+        // },
+        placeholders: {
+          number: "**** **** **** ****",
+          name: "Arya Stark",
+          expiry: "**/****",
+          cvc: "***",
+        },
+        messages: {
+          validDate: "expire\ndate",
+          monthYear: "mm/yy",
+        },
+        // width: 350, // optional — default 350px
+        // masks: {
+        //   cardNumber: "•", // optional - mask card number
+        // },
+      });
+    </script>
   </body>
 </html>
