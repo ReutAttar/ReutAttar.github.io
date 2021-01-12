@@ -1,0 +1,125 @@
+body {
+  font-size: 26px;
+  font-family: cursive;
+  color: white; /*changes the text color in the div element*/
+}
+
+#countdown-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 70px;
+  grid-column-gap: 20px;
+  width: 600px;
+  margin: 40px auto;
+  padding: 15px;
+  border-radius: 5px;
+  background: linear-gradient(#157d6f, #3eaf9f, #ededed);
+  text-align: center;
+}
+
+#countdown {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#showCountdown {
+  z-index: 1;
+}
+input {
+  border-radius: 5px;
+  color: white;
+  border: solid 1px #dceeec;
+  vertical-align: middle;
+  background: none;
+  text-align: center;
+  padding: 5px 0;
+}
+input:disabled {
+  /* background: #dceeec; */
+  background-color: #ffffff9c;
+}
+h3 {
+  font-weight: 100;
+  font-size: 13px;
+  color: chartreuse;
+  margin: 0;
+}
+
+#timeOutImg {
+  margin: 40px auto;
+}
+
+svg {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 502px;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke-width: 5px;
+  stroke: white;
+  fill: #33e32a; /*none;*/
+  transition: all 1s linear;
+}
+
+.loader {
+  display: none;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 120px;
+  height: 120px;
+  margin: 40px auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.myButton {
+  box-shadow: 3px 4px 0px 0px #899599;
+  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  background-color: #ededed;
+  border-radius: 10px;
+  border: 1px solid #d6bcd6;
+  cursor: pointer;
+  color: #3a8a9e;
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #e1e2ed;
+}
+
+.myButton:hover {
+  background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+  background-color: #bab1ba;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.myButton:disabled {
+  background: darkgrey;
+  color: #377686;
+}
+#btnReset {
+  margin: auto;
+}

@@ -3,43 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="countdown-container">
+    <div class="my-slider">
       <div>
-        <label>Minutes</label>
-        <input type="number" id="inputMinutes" min="0" max="59" />
-        <h3 id="invalidMinutes" style="display: none">minutes must be between 0-59</h3>
-      </div>
-      <div></div>
-      <div>
-        <label>Seconds</label>
-        <input type="number" id="inputSeconds" min="0" max="59" />
-        <h3 id="invalidSeconds" style="display: none">seconds must be between 0-59</h3>
-      </div>
-      <div></div>
-      <div id="countdown">
-        <svg>
-          <circle r="80" cx="100" cy="100"></circle>
-        </svg>
-        <div id="showCountdown"><span id="minutes">00</span> : <span id="seconds">00</span></div>
-      </div>
-      <div></div>
-      <div>
-        <button id="btnStart" class="myButton">Start Countdown</button>
+        <img
+          src="https://img.freepik.com/free-photo/autumn-forest_1182-869.jpg?size=626&ext=jpg&ga=GA1.2.192830739.1606753746"
+        />
       </div>
       <div>
-        <button id="btnPause" class="myButton">Pause Countdown</button>
+        <img
+          src="https://img.freepik.com/free-photo/beautiful-park_1127-2854.jpg?size=626&ext=jpg&ga=GA1.2.192830739.1606753746"
+        />
       </div>
       <div>
-        <button id="btnStop" class="myButton">Stop Countdown</button>
+        <img
+          src="https://img.freepik.com/free-photo/beautiful-sunset-mountain-around-beach-sea-ocean-rock_74190-13290.jpg?size=626&ext=jpg&ga=GA1.2.192830739.1606753746"
+        />
+      </div>
+      <div>
+        <img
+          src="https://img.freepik.com/free-photo/beautiful-scenery-green-valley-near-alp-mountains-austria-cloudy-sky_181624-6979.jpg?size=626&ext=jpg&ga=GA1.2.192830739.1606753746"
+        />
       </div>
     </div>
-    <div class="loader"></div>
-    <img id="timeOutImg" style="display: none" />
-    <button id="btnReset" class="myButton" style="display: none">Restart</button>
     <script src="main.js"></script>
   </body>
 </html>
